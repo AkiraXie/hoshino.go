@@ -18,7 +18,6 @@ func init() {
 	})
 	oocr.Got("images", "请发送图片", func(ctx *zero.Ctx) {
 		imgs := ctx.State["images"].([]string)
-		fmt.Println(imgs)
 		for i, img := range imgs {
 			msg := fmt.Sprintf("第%d张图片的识别结果是:", i+1)
 			res := ctx.OCRImage(img)

@@ -94,7 +94,7 @@ func (mw *MatcherWrapper) FinishChain(ctx *zero.Ctx, message ...message.MessageS
 
 func (mw *MatcherWrapper) Ok() *MatcherWrapper {
 	mw.Matcher.Handle(func(ctx *zero.Ctx) {
-		log.Infof("消息 %v将会被 %v服务处理", ctx.Event.RawMessage, mw.sv.name)
+		log.Infof("消息 %v将会被%v服务处理", ctx.Event.RawMessage, mw.sv.name)
 		for _, handler := range mw.handlers {
 			handler(ctx)
 			if _, ok := ctx.State["__done__"]; ok {

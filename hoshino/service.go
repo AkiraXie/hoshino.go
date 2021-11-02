@@ -104,11 +104,11 @@ func unpack(v []byte) map[int64]bool {
 }
 
 func (sv *Service) On(typ string, rules ...zero.Rule) *MatcherWrapper {
-	return &MatcherWrapper{Matcher: sv.e.On(typ, rules...)}
+	return &MatcherWrapper{Matcher: sv.e.On(typ, rules...), sv: sv}
 }
 
 func (sv *Service) OnCommandGroup(commands []string, rules ...zero.Rule) *MatcherWrapper {
-	return &MatcherWrapper{Matcher: sv.e.OnCommandGroup(commands, rules...)}
+	return &MatcherWrapper{Matcher: sv.e.OnCommandGroup(commands, rules...), sv: sv}
 }
 
 func Lookup(service string) (*Service, bool) {
