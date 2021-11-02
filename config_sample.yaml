@@ -1,0 +1,7 @@
+nickname: [bot]
+command_prefix: /
+super_users: [111]
+expire_duration : 180
+access_token : ""
+host : 127.0.0.1
+port : 6700

@@ -1,3 +1,7 @@
+#repo custom
+config.yaml
+.db
+.idea
 # Binaries for programs and plugins
 *.exe
 *.exe~
